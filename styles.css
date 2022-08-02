@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #babfd1;
+}
+
+.header {
+  background-color: #ffadc2;
+}
+
+
+.nav-logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.nav-logo-text,
+.link {
+  color: #607196;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  line-height: 3em;
+  width: 30%;
+}
+
+.nav-item {
+  display: flex;
+  list-style: none;
+}
+
+.link, .popup-item {
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.link:hover {
+  color: #e8e9ed;
+}
+
+.label-toggle {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.popup-toggle {
+  appearance: none;
+}
+
+
+
+.popup {
+  position: absolute;
+  right: 6em;
+  top: 2.5em;
+  width: 18em;
+  height: 35em;
+  background-color: #FFFFFF;
+  border: 1px solid #ffadc2;
+  box-shadow: 0 0 10px #ffadc2;
+  border-radius: 10px;
+  display: none;
+  z-index: 2;
+  overflow-y: auto;
+}
+
+.popup-toggle:checked + .popup {
+  display: block;
+}
+
+.popup-content-main {
+  position: relative;
+  top: 50px;
+  display: grid;
+  background-color: purple;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  display: none;
+}
+
+.popup-content-additional {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.popup-pic {
+  width: 2.5em;
+}
+
+.popup-more {
+  appearance: none;
+}
+
+
+
+/* used this to align image with other li items */
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bell {
+  width: 44%;
+  height: 46%;
+  margin: 3;
+}
+
+.bell:hover, .popup-img:hover {
+  border-radius: 5px;
+  background-color: #e8e9ed;
+  box-shadow: 0 0 10px #e8e9ed;
+}
