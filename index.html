@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="./styles.css"> -->
+  <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
   <header class="header">
     <nav class="navbar">
       <div class="nav-logo">
-        <span class="logo-text">HTML & CSS</span>
+        <span class="nav-logo-text">HTML & CSS</span>
       </div>
       <ul class="nav-links">
         <div class=""></div>
@@ -28,6 +28,10 @@
         </li>
 
         <!-- li contains the whole popup window -->
+        <label>
+          <input class="popup-toggle" type="checkbox">
+          <img class='popup-toggle' src="./images/popup-button.png" alt="popup-button">
+        </label>
         <li class="nav-item">
           <div class="popup">
             <div class="popup-content-main">
@@ -88,23 +92,27 @@
             </label>
             <div class="popup-content-additional">
               <a href="#" class="popup-item">
-                <img src="./images/chat.png" alt="chat_icon">
+                <img class="popup-pic" src="./images/chat.png" alt="chat_icon">
                 <p class="popup-description">Chat</p>
               </a>
               <a href="#" class="popup-item">
-                <img src="./images/classroom.png" alt="classroom_icon">
+                <img class="popup-pic" src="./images/classroom.png" alt="classroom_icon">
                 <p class="popup-description">Classroom</p>
               </a>
               <a href="#" class="popup-item">
-                <img src="./images/mars.png" alt="mars_icon">
+                <img class="popup-pic" src="./images/collection.png" alt="collection_icon">
+                <p class="popup-description">Collection</p>
+              </a>
+              <a href="#" class="popup-item">
+                <img class="popup-pic" src="./images/mars.png" alt="mars_icon">
                 <p class="popup-description">Mars</p>
               </a>
               <a href="#" class="popup-item">
-                <img src="./images/blogs.png" alt="blogs_icon">
+                <img class="popup-pic" src="./images/blogs.png" alt="blogs_icon">
                 <p class="popup-description">Blogs</p>
               </a>
               <a href="#" class="popup-item">
-                <img src="./images/promo.png" alt="promos_icon">
+                <img class="popup-pic" src="./images/promo.png" alt="promos_icon">
                 <p class="popup-description">Promos</p>
               </a>
             </div>
@@ -112,7 +120,7 @@
         </li>
         <li class="nav-item">
           <a class='link' href="#">
-            <img src="./images/bell.png" alt="bell_icon">
+            <img class="bell" src="./images/bell.png" alt="bell_icon">
           </a>
         </li>
       </ul>
