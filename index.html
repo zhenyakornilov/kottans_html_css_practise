@@ -15,8 +15,9 @@
 <body>
   <header class="header">
     <nav class="navbar">
-      <div class="nav-logo">
+      <div class="nav-logo image-wrapper">
         <span class="nav-logo-text">HTML & CSS</span>
+        <span><img style="margin-left: 5px" src="./images/favicon.png" alt="kitten-icon"></span>
       </div>
       <ul class="nav-links">
         <div class=""></div>
@@ -28,11 +29,12 @@
         </li>
 
         <!-- li contains the whole popup window -->
-        <label>
-          <input class="popup-toggle" type="checkbox">
-          <img class='popup-toggle' src="./images/popup-button.png" alt="popup-button">
-        </label>
+
         <li class="nav-item">
+          <label class="label-toggle" for="check-toggle">
+            <img class='popup-img' src="./images/popup-button.png" alt="popup-button">
+          </label>
+          <input class="popup-toggle" type="checkbox" id="check-toggle">
           <div class="popup">
             <div class="popup-content-main">
               <a href="#" class="popup-item">
@@ -119,7 +121,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class='link' href="#">
+          <a class='link image-wrapper' href="#">
             <img class="bell" src="./images/bell.png" alt="bell_icon">
           </a>
         </li>
