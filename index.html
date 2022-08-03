@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;200&display=swap" rel="stylesheet">
   <title>PopUp</title>
 </head>
 
@@ -29,7 +29,6 @@
         </li>
 
         <!-- li contains the whole popup window -->
-
         <li class="nav-item">
           <label class="label-toggle" for="check-toggle">
             <img class='popup-img' src="./images/popup-button.png" alt="popup-button">
@@ -88,10 +87,8 @@
             </div>
 
             <!-- more icons to show -->
-            <label class="check-additional">
-              <input class="popup-more" type="checkbox">
-              More...
-            </label>
+            <input class="popup-more" type="checkbox" id="more-content">
+            
             <div class="popup-content-additional">
               <a href="#" class="popup-item">
                 <img class="popup-pic" src="./images/chat.png" alt="chat_icon">
@@ -118,6 +115,7 @@
                 <p class="popup-description">Promos</p>
               </a>
             </div>
+            <label class="check-additional" for="more-content"></label>
           </div>
         </li>
         <li class="nav-item">

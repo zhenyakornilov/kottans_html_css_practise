@@ -13,6 +13,12 @@ body {
   background-color: #ffadc2;
 }
 
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .nav-logo-text {
   font-size: 20px;
@@ -23,13 +29,6 @@ body {
 .nav-logo-text,
 .link {
   color: #607196;
-}
-
-.navbar {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .nav-links {
@@ -44,7 +43,7 @@ body {
   list-style: none;
 }
 
-.link, .popup-item {
+.link {
   text-decoration: none;
   font-size: 1.1em;
 }
@@ -60,27 +59,23 @@ body {
   justify-content: center;
 }
 
-
-
 .popup-toggle {
   appearance: none;
 }
 
-
-
 .popup {
   position: absolute;
   right: 6em;
-  top: 2.5em;
-  width: 18em;
-  height: 35em;
+  top: 4em;
+  width: 19em;
+  height: 34em;
   background-color: #FFFFFF;
   border: 1px solid #ffadc2;
   box-shadow: 0 0 10px #ffadc2;
   border-radius: 10px;
   display: none;
-  z-index: 2;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .popup-toggle:checked + .popup {
@@ -88,27 +83,68 @@ body {
 }
 
 .popup-content-main {
-  position: relative;
-  top: 50px;
   display: grid;
-  background-color: purple;
+  padding: 0 1.2em;
+  padding-top: 1.5em;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-items: center;
-  display: none;
 }
 
 .popup-content-additional {
-  display: grid;
+  padding: 0em 1.2em;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
+  display: none;
+  position: relative;
+  bottom: 10%;
+}
+
+.popup-more:checked ~ .popup-content-additional {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 2fr);
   justify-items: center;
+  align-items: center;
+}
+
+.popup-more ~ .check-additional::before {
+  content: 'More...';
+}
+
+.popup-more:checked ~ .check-additional::before {
+  content: 'Less';
+}
+
+.check-additional {
+  position: relative;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  bottom: 12%;
+}
+
+.popup-item {
+  text-decoration: none;
+  width: 5em;
+  height: 6.6em;
+  border: 1px solid transparent;
 }
 
 .popup-pic {
-  width: 2.5em;
+  display: block;
+  margin: 0 auto;
+  width: 1.8em;
+  height: 1.8em;
+  object-fit: cover;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.popup-description {
+  padding-top: 1em;
+  text-align: center;
+  line-height: 1em;
+  font-size: 1em;
 }
 
 .popup-more {
@@ -125,9 +161,8 @@ body {
 }
 
 .bell {
-  width: 44%;
+  width: 80%;
   height: 46%;
-  margin: 3;
 }
 
 .bell:hover, .popup-img:hover {
