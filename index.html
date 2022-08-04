@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
   <title>PopUp</title>
 </head>
 
@@ -30,10 +30,10 @@
 
         <!-- li contains the whole popup window -->
         <li class="nav-item">
+          <input class="popup-toggle" type="checkbox" id="check-toggle">
           <label class="label-toggle" for="check-toggle">
             <img class='popup-img' src="./images/popup-button.png" alt="popup-button">
           </label>
-          <input class="popup-toggle" type="checkbox" id="check-toggle">
           <div class="popup">
             <div class="popup-content-main">
               <a href="#" class="popup-item">
@@ -88,7 +88,7 @@
 
             <!-- more icons to show -->
             <input class="popup-more" type="checkbox" id="more-content">
-            
+
             <div class="popup-content-additional">
               <a href="#" class="popup-item">
                 <img class="popup-pic" src="./images/chat.png" alt="chat_icon">
@@ -115,7 +115,7 @@
                 <p class="popup-description">Promos</p>
               </a>
             </div>
-            <label class="check-additional" for="more-content"></label>
+            <label class="check-additional" for="more-content"><span class="more-btn"></span></label>
           </div>
         </li>
         <li class="nav-item">

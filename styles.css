@@ -2,6 +2,7 @@
   margin: 0;
   margin-bottom: 0;
   box-sizing: border-box;
+  outline-style: none;
 }
 
 body {
@@ -14,10 +15,8 @@ body {
 }
 
 .navbar {
-  position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .nav-logo-text {
@@ -48,10 +47,6 @@ body {
   font-size: 1.1em;
 }
 
-.link:hover {
-  color: #e8e9ed;
-}
-
 .label-toggle {
   display: flex;
   cursor: pointer;
@@ -67,52 +62,60 @@ body {
   position: absolute;
   right: 6em;
   top: 4em;
-  width: 19em;
-  height: 34em;
+  width: 20em;
+  height: 36em;
   background-color: #FFFFFF;
   border: 1px solid #ffadc2;
   box-shadow: 0 0 10px #ffadc2;
   border-radius: 10px;
   display: none;
   overflow-y: auto;
-  overflow-x: hidden;
 }
 
-.popup-toggle:checked + .popup {
+.popup-toggle:checked ~ .popup {
   display: block;
 }
 
 .popup-content-main {
   display: grid;
-  padding: 0 1.2em;
-  padding-top: 1.5em;
+  padding: 1em 1em 0;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  row-gap: 0.5em;
+  column-gap: 0.1em;
 }
 
 .popup-content-additional {
-  padding: 0em 1.2em;
+  padding: 1.5em 1em 0;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
   display: none;
   position: relative;
   bottom: 10%;
+  row-gap: 0.5em;
+  column-gap: 0.1em;
 }
 
 .popup-more:checked ~ .popup-content-additional {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 2fr);
-  justify-items: center;
-  align-items: center;
 }
 
-.popup-more ~ .check-additional::before {
+.popup-more ~ .check-additional > .more-btn::before {
   content: 'More...';
 }
 
-.popup-more:checked ~ .check-additional::before {
+.popup-more:checked ~ .check-additional > .more-btn::before {
   content: 'Less';
+}
+
+.more-btn {
+  border-radius: 5px;
+  border: 2px solid #ffadc2;
+  padding: 5px 5px;
 }
 
 .check-additional {
@@ -120,40 +123,32 @@ body {
   display: block;
   text-align: center;
   cursor: pointer;
-  bottom: 12%;
+  bottom: 7%;
 }
 
 .popup-item {
   text-decoration: none;
   width: 5em;
   height: 6.6em;
-  border: 1px solid transparent;
 }
 
 .popup-pic {
   display: block;
-  margin: 0 auto;
+  margin: 5px auto;
   width: 1.8em;
   height: 1.8em;
   object-fit: cover;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .popup-description {
-  padding-top: 1em;
   text-align: center;
-  line-height: 1em;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .popup-more {
   appearance: none;
 }
 
-
-
-/* used this to align image with other li items */
 .image-wrapper {
   display: flex;
   justify-content: center;
@@ -161,12 +156,40 @@ body {
 }
 
 .bell {
-  width: 80%;
-  height: 46%;
+  width: 1.1em;
 }
 
-.bell:hover, .popup-img:hover {
+
+/* focus and hover  */
+.link:hover,
+.link:focus {
+  color: #e8e9ed;
+}
+
+.popup-toggle:focus + .label-toggle > .popup-img,
+.image-wrapper:focus > .bell {
+  background-color: #e8e9ed;
+  border-radius: 5px;
+  color: #e8e9ed;
+}
+
+.popup-item:hover,
+.popup-item:focus {
+  border: 1px solid #ffadc2;
+  border-radius: 5px;
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
+}
+
+.more-btn:hover,
+.popup-more:focus ~ .check-additional > .more-btn {
+  background-color: #ffadc2;
+  transition: all 0.2s ease-in-out;
+}
+
+.bell:hover, 
+.popup-img:hover {
   border-radius: 5px;
   background-color: #e8e9ed;
-  box-shadow: 0 0 10px #e8e9ed;
 }
+
