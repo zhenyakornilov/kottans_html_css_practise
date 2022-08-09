@@ -105,12 +105,9 @@ body {
   align-items: center;
   row-gap: 0.5em;
   column-gap: 0.5em;
-  overflow: visible;
 }
 
 .item-wrap.hidden {
-  justify-items: center;
-  align-items: center;
   display: none;
 }
 
@@ -146,7 +143,7 @@ body {
 
 .popup-pic {
   display: block;
-  margin: 5px auto 0 auto;
+  margin: 5px auto 0;
   width: 1.8em;
   height: 1.8em;
   object-fit: cover;
@@ -208,35 +205,35 @@ body {
     width: 50%;
   }
 
-  .popup::after {
+  .popup-body::after {
     right: 15.5%;
   }
 }
 
 @media (min-width: 1680px) {
-  .popup::after {
+  .popup-body::after {
     right: 9%;
   }
 }
 
 @media (min-width: 1280px) and (max-width: 1680px) {
-  .popup {
+  .popup-body {
     right: 4em;
   }
 }
 
 @media (max-width: 1279px) and (min-width: 1141px) {
-  .popup {
+  .popup-body {
     right: 2.5em;
   }
 }
 
 @media (max-width: 1010px) and (min-width: 721px) {
-  .popup {
+  .popup-body {
     right: 2em;
   }
 
-  .popup::after {
+  .popup-body::after {
     right: 14.3%;
   }
 }
@@ -246,11 +243,11 @@ body {
     width: 60%;
   }
 
-  .popup {
+  .popup-body {
     right: 3em;
   }
 
-  .popup::after {
+  .popup-body::after {
     right: 17.5%;
   }
 }
@@ -260,7 +257,7 @@ body {
     width: 80%;
   }
 
-  .popup {
+  .popup-body {
     right: 1.6em;
   }
 }
