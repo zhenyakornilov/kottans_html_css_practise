@@ -212,7 +212,7 @@ body {
 
 @media (min-width: 1680px) {
   .popup-body::after {
-    right: 9%;
+    right: 10%;
   }
 }
 
